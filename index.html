@@ -459,8 +459,9 @@
         const subcategoryDescription = document.getElementById('subcategoryDescription');
         const paymentSection = document.getElementById('paymentSection');
         const paymentList = document.getElementById('paymentList');
-        let selectedPaymentMethod = null;
+        let selectedPaymentMethod = '';
 
+        // Fungsi untuk mengupdate subkategori berdasarkan kategori
         categorySelect.addEventListener('change', function() {
             const category = this.value;
             subcategorySelect.innerHTML = '<option value="">-- Pilih Sub-Kategori --</option>';
@@ -475,8 +476,7 @@
                 Object.keys(subcategories).forEach(subcategory => {
                     const option = document.createElement('option');
                     option.value = subcategory;
-                    // Mengganti "_" dengan spasi pada subkategori
-                    option.textContent = subcategory.replace(/_/g, ' ');
+                    option.textContent = subcategory;
                     subcategorySelect.appendChild(option);
                 });
                 subcategorySelect.disabled = false;
@@ -485,7 +485,7 @@
             }
         });
 
-        // Update event listener untuk subkategori dan produk
+        // Fungsi untuk mengupdate produk berdasarkan subkategori
         subcategorySelect.addEventListener('change', function() {
             const category = categorySelect.value;
             const subcategory = this.value;
@@ -513,7 +513,7 @@
             }
         });
 
-        // Update event listener untuk produk
+        // Fungsi untuk menampilkan harga dan deskripsi produk
         productSelect.addEventListener('change', function() {
             const category = categorySelect.value;
             const subcategory = subcategorySelect.value;
@@ -526,14 +526,12 @@
                 const subcategoryProducts = products[category].subcategories[subcategory];
                 const product = subcategoryProducts.find(p => p.code === productCode);
                 if (product) {
-                    // Menampilkan harga produk dengan styling khusus
                     productPrice.innerHTML = product.price;
                     productDescription.innerHTML = product.description;
-                    productDescription.style.display = 'block';
                     paymentSection.style.display = 'block';
-                    paymentList.innerHTML = '';
 
-                    // Menampilkan metode pembayaran
+                    // Menampilkan metode pembayaran yang tersedia
+                    paymentList.innerHTML = '';
                     product.paymentMethods.forEach(method => {
                         const button = document.createElement('button');
                         button.textContent = method;
@@ -545,41 +543,63 @@
             }
         });
 
+        // Fungsi untuk memilih metode pembayaran
         function selectPaymentMethod(method, button) {
             selectedPaymentMethod = method;
-
-            // Menghapus kelas 'selected-payment' dari semua tombol
             document.querySelectorAll('.payment-button').forEach(btn => btn.classList.remove('selected-payment'));
-
-            // Menambahkan kelas 'selected-payment' ke tombol yang dipilih
             button.classList.add('selected-payment');
         }
 
+        // Fungsi untuk mengirim data form
         function submitForm() {
+            const phone = document.getElementById('phone').value;
             const category = categorySelect.value;
             const subcategory = subcategorySelect.value;
-            const productCode = productSelect.value;
-            const phone = document.getElementById('phone').value;
+            const product = productSelect.value;
 
-            if (!subcategory || !productCode || !phone || !selectedPaymentMethod) {
-                alert('Mohon lengkapi semua informasi.');
+            if (!phone || !category || !subcategory || !product || !selectedPaymentMethod) {
+                alert("Pastikan semua pilihan sudah diisi!");
                 return;
             }
 
-            const selectedProduct = products[category]?.subcategories[subcategory]?.find(product => product.code === productCode);
-            const productName = selectedProduct ? selectedProduct.name : '';
-            const perintah = selectedProduct ? selectedProduct.perintah : '';
+            const productCode = products[category].subcategories[subcategory].find(p => p.code === product).code;
+            const url = `https://wa.me/62${phone}?text=Hai, saya ingin membeli produk ${productCode} dari kategori ${category}, subkategori ${subcategory} menggunakan metode pembayaran ${selectedPaymentMethod}.`;
+            window.open(url, '_blank');
+        }
 
-            let message;
+        // Fungsi untuk toggle informasi tambahan
+        function toggleInfo() {
+            const infoText = document.getElementById('infoText');
+            infoText.style.display = infoText.style.display === 'none' ? 'block' : 'none';
+        }
 
-            // Cek apakah payment method ada
-            if (selectedPaymentMethod !== 'tidak') {
-                // Gabungkan parameter dengan titik satu kali, pastikan tidak ada titik ganda
-                message = `${perintah} ${productCode}.${phone}.${selectedPaymentMethod}`;
-            } else {
-                // Jika payment method tidak dipilih, hanya gabungkan perintah, kode produk, dan nomor tujuan
-                message = `${perintah} ${productCode}.${phone}`;
-            }
+        // Fungsi untuk submit form
+        function submitForm() {
+            const phone = document.getElementById('phone').value;
+            alert('Nomor tujuan: ' + phone);
+        }
+
+        // Fungsi untuk menangani tombol beli
+function submitForm() {
+    const category = categorySelect.value;
+    const subcategory = subcategorySelect.value;
+    const productCode = productSelect.value;
+    const phone = document.getElementById('phone').value;
+
+    if (!subcategory || !productCode || !phone || !selectedPaymentMethod) {
+        alert('Mohon lengkapi semua informasi.');
+        return;
+    }
+
+    const selectedProduct = products[category]?.subcategories[subcategory]?.find(product => product.code === productCode);
+    const productName = selectedProduct ? selectedProduct.name : '';
+
+    let message;
+    if (selectedPaymentMethod !== 'tidak') {
+        message = `${subcategory} ${productCode}.${phone}.${selectedPaymentMethod}`;
+    } else {
+        message = `${subcategory} ${productCode}.${phone}`;
+    }
 
     const phoneNumber = '6285959732685'; // Nomor WhatsApp tujuan
     const whatsappURL = `https://wa.me/${6285959732685}?text=${encodeURIComponent(message)}`;
