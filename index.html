@@ -109,6 +109,25 @@
             gap: 10px; /* Jarak antar tombol */
         }
 
+        /* Tombol YouTube */
+        .youtube-button {
+            background-color: #530cd6;
+            color: white;
+            font-size: 14px;
+            cursor: pointer;
+            padding: 12px 15px;
+            border-radius: 20px;
+            text-align: center;
+            border: none;
+            text-transform: uppercase;
+            flex: 1;
+        }
+
+        .youtube-button:hover {
+            background-color: #a37207;
+        }
+
+
         /* Tombol WhatsApp */
         .whatsapp-button {
             background-color: #d6c90c;
@@ -248,8 +267,11 @@
         <div class="section">
             <button onclick="submitForm()">Beli</button>
 
+            <!-- Tombol YouTube -->
+             <button class="youtube-button" onclick="redirectToYouTube()">youtube</button>
+
              <!-- Tombol WhatsApp -->
-             <button class="whatsapp-button" onclick="redirectToWhatsAppGroup()">youtube</button>
+             <button class="whatsapp-button" onclick="redirectToWhatsAppGroup()">saluran gc whatsapp</button>
             </div>
         </div>
     </div>
@@ -564,8 +586,13 @@
     window.open(whatsappURL, '_blank');
 }
 
+function redirectToYouTube() {
+            const groupLink = "https://www.youtube.com/results?search_query=roby+ch=9"; // Ganti dengan link yutub kamu
+            window.open(groupLink, '_blank');
+        }        
+
 function redirectToWhatsAppGroup() {
-            const groupLink = "https://www.youtube.com/@robych522"; // Ganti dengan link grup WhatsApp kamu
+            const groupLink = "https://whatsapp.com/channel/0029VaoGtBfBVJlBs9B8XU08"; // Ganti dengan link grup WhatsApp kamu
             window.open(groupLink, '_blank');
         }
     </script>
