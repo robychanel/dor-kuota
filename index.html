@@ -109,10 +109,10 @@
             gap: 10px; /* Jarak antar tombol */
         }
 
-        /* Tombol Daftar */
-        .daftar-button {
+        /* FaceBook Daftar */
+        .facebook-button {
             background-color: #d6c90c;
-            color: white;
+            color: black;
             font-size: 14px;
             cursor: pointer;
             padding: 12px 15px;
@@ -123,7 +123,7 @@
             flex: 1;
         }
 
-        .daftar-button:hover {
+        .facebook-button:hover {
             background-color: #a37207;
         }
 
@@ -149,7 +149,7 @@
         /* Tombol WhatsApp */
         .whatsapp-button {
             background-color: #d6c90c;
-            color: white;
+            color: black;
             font-size: 14px;
             cursor: pointer;
             padding: 12px 15px;
@@ -285,8 +285,8 @@
         <div class="section">
             <button onclick="submitForm()">Beli</button>
 
-            <!-- Tombol Daftar -->
-             <button class="daftar-button" onclick="redirectDaftar()">daftar temabak paket</button>
+            <!-- Tombol FacrBook -->
+             <button class="facebook-button" onclick="redirectFaceBook()">daftar temabak paket</button>
 
             <!-- Tombol YouTube -->
              <button class="youtube-button" onclick="redirectToYouTube()">youtube</button>
@@ -607,7 +607,7 @@
     window.open(whatsappURL, '_blank');
 }
 
-function redirectToDaftar() {
+function redirectToFaceBook() {
             const groupLink = "https://https://wa.me/6285959732685"; // Ganti dengan link daftar kamu
             window.open(groupLink, '_blank');
         }        
