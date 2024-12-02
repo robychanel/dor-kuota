@@ -171,6 +171,24 @@
             background-color: #29cf00;
         }
 
+        /* Tombol Daftar */
+           .daftar-button {
+            background-color: #2114d6;
+            color: white;
+            font-size: 10px;
+            font-weight: normal;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            padding: 7px 10px;
+            border-radius: 20px;
+            text-align: center;
+            flex: 1;
+        }
+
+         .daftar-button:hover {
+            background-color: #a37207;
+       }
+             
         /* Styling untuk tombol yang dipilih (method yang sudah dipilih) */
         .selected-payment {
             background-color: #29cf00; /* Warna hijau saat dipilih */
@@ -226,13 +244,8 @@
         <h1>ROBY CH</h1>
         <h2>tembak paket murah</h2>
 
-                <!-- Tombol KLIK & BACA INI! -->
-        <button onclick="toggleInfo()">cara untuk daftar/join</button>
-
-        <!-- Teks yang akan ditampilkan -->
-        <div class="info-text" id="infoText">
-            <p><label for="phone">CARA DAFTAR TEMBAK PAKET:</label>1. chat ke admin roby ch & minta join bot dor kuota<br><label for="phone">CARA DEPOSIT SALDO BOT:</label>1. ketik dulu menu ke bot<br>2. ketik deposit ke bot<br>3. kalian pilih dulu deposit manual/otomatis di bot<br>lalu kalian jangan lupa tf buat deposit bot<br><br>NO BOT whatsapp: 085959732685</p>
-
+           <button class="cekstock-button" onclick="window.open('https://wa.me/6287712425327?text=min sya ingin dftr web bot ', '_blank');">DAFTAR</button>
+        
         <!-- Kategori Utama -->
         <div class="section">
             <label for="category">Pilih Kategori:</label>
