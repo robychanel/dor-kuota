@@ -233,17 +233,55 @@
             margin-top: 10px; /* Memberikan jarak antara deskripsi dan elemen lainnya */
         }
     </style>
-</head>
-<body>
-
-    <div class="header">
+	<link rel="stylesheet" href="style.css">
+   </head>
+   <body> 
+	   <div class="header">
         ROBY CH
-    </div>
-
-    <div class="container">
+    </div>   
+	   <div class="container">
         <h1>ROBY CH</h1>
-        <h2>welcome paket murah</h2>
-
+		   
+      <div class="wrapper">
+         <div class="display">
+            <div id="time"></div>
+         </div>
+         <span></span>
+         <span></span>
+      </div>
+      <script>
+         setInterval(()=>{
+           const time = document.querySelector(".display #time");
+           let date = new Date();
+           let hours = date.getHours();
+           let minutes = date.getMinutes();
+           let seconds = date.getSeconds();
+           let day_night = "AM";
+           if(hours > 12){
+             day_night = "PM";  
+             hours = hours - 12;
+           }
+           if(seconds < 10){
+             seconds = "0" + seconds;
+           }
+           if(minutes < 10){
+             minutes = "0" + minutes;
+           }
+           if(hours < 10){
+             hours = "0" + hours;
+           }
+           time.textContent = hours + ":" + minutes + ":" + seconds + " "+ day_night;
+         });
+      </script>
+   </body>
+	
+	<style>
+	.btn:hover {
+		color: white;
+		opacity: .8;
+		transform: scale(1.05);
+	}
+</style>
            <button class="ceksaldo-button" onclick="window.open('https://wa.me/6285959732685?text=menu saldo', '_blank');">CEK SALDO</button>
         
         <!-- Kategori Utama -->
@@ -506,7 +544,7 @@
         const paymentSection = document.getElementById('paymentSection');
         const paymentList = document.getElementById('paymentList');
         let selectedPaymentMethod = '';
-
+	    
         // Fungsi untuk mengupdate subkategori berdasarkan kategori
         categorySelect.addEventListener('change', function() {
             const category = this.value;
