@@ -349,25 +349,11 @@
         const products = {
             paket_otp: {
                 subcategories: {
-                    orderverif: [
-                        { 
-                            name: 'EDUKASI 1gb',
-                            code: 'XED1',
-                            paymentMethods: ['pulsa', 'dana', 'gopay'], 
-                            description: '<label for="product">!!BACA SEBELUM ORDER!!</label>~ paket edukasi 1gb<br>~ sediakan pulsa/E-wallet 1.000', 
-                            price: 'Rp 1.000',
-                            subcategoryDescription: '<label for="product">UNTUK OTP NOMER SILAHKAN TINGGAL KLIK</label> <a href="https://myxl.nfime.xyz" target="_blank">DI SINI</a>'
-                         },
-                         {
-                            name: ' Xtra Combo Flex S', 
-                            code: 'xcf1',
-                            price: '2500',
-                            paymentMethods: ['pulsa', 'dana', 'gopay'],
-                            description: '<label for="product">!!BACA SEBELUM ORDER!!</label>~ Kuota Utama 3.5GB<br>~ Kuota Area (Berdasarkan Area)<br>~ Masa aktif 30hari<br>~ Untuk claim addon<br>~ sediakan pulsa/e-wallet dan bayar nominal 16000'
-                        },
+                    AKRAB_PENGELOLA: [
                         { 
                             name: 'Unlock anggota tambahan Akrab', 
                             code: 'XAA1',
+			    perintah: 'ORDERVERIF',
                             price: 'Rp 1000', 
                             paymentMethods: ['pulsa'], 
                             description: '<label for="product">!!BACA SEBELUM ORDER!!</label>~ Unlock Anggota tambahan akrab<br>~ Sediakan pulsa & bayar nominal 20.000' 
@@ -375,6 +361,7 @@
                         { 
                             name: 'Pengelola Akrab S', 
                             code: 'PS40',
+		            perintah: 'ORDERVERIF',
                             price: 'Rp 10.000', 
                             paymentMethods: ['pulsa', 'dana', 'gopay'], 
                             description: '<label for="product">!!BACA SEBELUM ORDER!!</label>~ Pengelola akrab S<br>~ Sediakan pulsa/e-wallet & bayar nominal 34.000' 
@@ -382,6 +369,7 @@
                         { 
                             name: 'Pengelola Akrab L',
                             code: 'PL40', 
+			    perintah: 'ORDERVERIF',
                             price: 'Rp 12.000', 
                             paymentMethods: ['pulsa', 'dana', 'gopay'], 
                             description: '<label for="product">!!BACA SEBELUM ORDER!!</label>~ Pengelola akrab L<br>~ beli di jam tengah malam agar mendapat reward (ga ada jaminan)<br>~ Sediakan pulsa/e-wallet & bayar nominal 108.000' 
@@ -389,6 +377,7 @@
                         { 
                             name: 'Pengelola Akrab XL', 
                             code: 'PXL40',
+			    perintah: 'ORDERVERIF',
                             price: 'Rp 12.000', 
                             paymentMethods: ['pulsa', 'dana', 'gopay'],
                             description: '<label for="product">!!BACA SEBELUM ORDER!!</label>~ Pengelola akrab XL<br>~ beli di jam tengah malam agar mendapat reward (ga ada jaminan)<br>~ Sediakan pulsa/e-wallet & bayar nominal 168.000' 
@@ -396,6 +385,7 @@
                         { 
                             name: 'Pengelola Akrab XXL', 
                             code: 'PXXL40',
+		            perintah: 'ORDERVERIF',
                             price: 'Rp 12.000', 
                             paymentMethods: ['pulsa', 'dana', 'gopay'], 
                             description: '<label for="product">!!BACA SEBELUM ORDER!!</label>~ Pengelola akrab XXL<br>~ beli di jam tengah malam agar mendapat reward (ga ada jaminan)<br>~ Sediakan pulsa/e-wallet & bayar nominal  270.000' 
@@ -404,9 +394,24 @@
                     ]
                 }
             },
+	    paket_nonotp: {
+                subcategories: {
+                    combo_flex: [
+			     {
+                            name: ' Xtra Combo Flex S', 
+                            code: 'xcf1',
+		            perintah: 'ORDERVERIF',
+                            price: '2500',
+                            paymentMethods: ['pulsa', 'dana', 'gopay'],
+                            description: '<label for="product">!!BACA SEBELUM ORDER!!</label>~ Kuota Utama 3.5GB<br>~ Kuota Area (Berdasarkan Area)<br>~ Masa aktif 30hari<br>~ Untuk claim addon<br>~ sediakan pulsa/e-wallet dan bayar nominal 16000'
+			   }
+                
+                    ]
+                }
+            },
             paket_nonotp: {
                 subcategories: {
-                    orderfast: [
+                ANGGOTA_AKRAB: [
                         { 
                             name: 'Akrab (BIG SUPER)',
                             code: 'XLBIGSUPER',
