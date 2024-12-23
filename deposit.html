@@ -23,7 +23,7 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            background-color: white;
+            background-color: rgb(218, 247, 185);
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -50,18 +50,18 @@
             width: 100%;
             padding: 10px;
             border-radius: 8px;
-            border: 1px solid #ddd;
+            border: 1px solid #f6faf6;
             font-size: 14px;
             margin-top: 8px;
         }
 
         .close-btn, .deposit-btn {
             background-color: #2114d6;
-            color: white;
+            color: rgb(241, 247, 240);
             padding: 10px 20px;
             border-radius: 10px;
             border: none;
-            cursor: pointer;
+            cursor:
             width: 100%;
             margin-top: 10px;
         }
@@ -82,18 +82,17 @@
     <!-- Pop-up Deposit -->
     <div class="overlay" id="overlay"></div>
     <div class="deposit-popup" id="depositPopup">
-        <h3>Pilih Metode Deposit</h3>
+        <h3>Silahkan Deposit Tuan</h3>
         <div class="deposit-method">
             <label for="depositMethod">Metode Deposit:</label>
             <select id="depositMethod">
                 <option value="otomatis">Otomatis</option>
-                <option value="manual">Manual</option>
             </select>
-            <p class="description">deposit otomatis akan terproses 24 jam oleh system<br><br>deposit manual akan terproses ketika admin online.</p>
+            <label for="description">silahkan kalian deposit sesuka kalian<br>deposit akan bekerja otomatis dari sistem.</label>
         </div>
         <div class="section" id="nominalSection">
             <label for="depositAmount">Nominal Deposit:</label>
-            <input type="text" id="depositAmount" placeholder="Masukkan nominal deposit tanpa TITIK">
+            <input type="text" id="depositAmount" placeholder="angka nominal tidak ada titik/koma">
         </div>
         <button class="deposit-btn" onclick="processDeposit()">Deposit</button>
         <button class="close-btn" onclick="closeDepositPopup()">Tutup</button>
@@ -117,7 +116,7 @@
             }
 
             // Generate WhatsApp link
-            var whatsappLink = "https://wa.me/6287717272676?text=" + encodeURIComponent(message);
+            var whatsappLink = "https://wa.me/6285959732685?text=" + encodeURIComponent(message);
             
             // Open WhatsApp link in a new tab
             window.open(whatsappLink, "_blank");
@@ -126,3 +125,4 @@
 
 </body>
 </html>
+
