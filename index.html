@@ -5,6 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TEMBAK PAKET</title>
     <style>
+	     /* Background Gradasi Bergerak */
+        @keyframes gradientMove {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+	    
         body {
             font-family: 'Arial', sans-serif;
             background-color: #f4f4f9;
@@ -35,6 +48,52 @@
             z-index: 1000;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
+
+	     /* Background Gradasi Bergerak untuk .container */
+@keyframes containerGradientMove {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Background Gradasi Bergerak untuk .container */
+@keyframes containerGradientMove {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.container {
+    background: linear-gradient(45deg, #f523a4, #2fe06a, #ee9dea, #da1709);
+    background-size: 400% 400%;
+    animation: containerGradientMove 10s ease infinite;
+    padding: 30px;
+    width: 100%;
+    max-width: 600px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 80px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    z-index: 900;
+    flex-grow: 1;
+    max-height: 80vh;
+    overflow-y: auto;
+    border: 2px solid #f0f0f0; /* Soft border for elegance */
+}
 
         .container {
             background-color: #fff;
