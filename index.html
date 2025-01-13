@@ -352,6 +352,7 @@
                 <option value="">-- Pilih Kategori --</option>
                 <option value="paket_otp_v1">PAKET KHUSUS XL OTP V1</option>
                 <option value="paket_otp_v2">PAKET KHUSUS XL OTP V2</option>
+	        <option value="paket_viaotp_v2">REGULER KHUSUS XL OTP</option>
 	        <option value="paket_nootp">REGULER KHUSUS XL NO OTP</option>
                 <option value="paket_nonotp">PAKET NON OTP XL&AXIS</option>
             </select>
@@ -586,16 +587,64 @@
                     ]
                 }
             },
+            paket_viaotp_v2: {
+                subcategories: {
+                REGULER_KHUSUS_XL_OTP: [
+                        { 
+                         
+                            name: 'XL DATA REGULER 1GB 3 HARI', 
+                            code: 'XLDATAR1GB3DNWOTP',
+                            perintah: 'PACKAGEBUY-XL',
+                            price: '2000', 
+                            paymentMethods: ['SALDOBOT'], 
+                            description: '<label for="product">!!BACA SEBELUM ORDER!!</label> ~ paket full reguler 24jam<br>~ tidak bisa di tumpuk/akumulasi<br>~ bisa di gabung dg paket otp 2gb & 3gb<br>~ jika udh abis langsung dor lagi yah<br>~ tanpa otp<br>~ no garansi'
+		        },
+                        {  
+                            name: 'XL DATA REGULER 2GB 3 HARI', 
+                            code: 'XLDATAR2GB3DNWOTP',
+                            perintah: 'PACKAGEBUY-XL',
+                            price: '3500', 
+                            paymentMethods: ['SALDOBOT'], 
+                            description: '<label for="product">!!BACA SEBELUM ORDER!!</label> ~ paket full reguler 24jam<br>~ tidak bisa di tumpuk/akumulasi<br>~ bisa di gabung dg paket otp 1gb & 3gb<br>~ jika udh abis langsung dor lagi yah<br>~ tanpa otp<br>~ no garansi'
+			},
+                        { 
+                         
+                            name: 'XL DATA REGULER 3GB 3 HARI', 
+                            code: 'XLDATAR3GB3DNWOTP',
+                            perintah: 'PACKAGEBUY-XL',
+                            price: '4500', 
+                            paymentMethods: ['SALDOBOT'], 
+                            description: '<label for="product">!!BACA SEBELUM ORDER!!</label> ~ paket full reguler 24jam<br>~ tidak bisa di tumpuk/akumulasi<br>~ bisa di gabung dg paket otp 1gb & 2gb<br>~ jika udh abis langsung dor lagi yah<br>~ tanpa otp<br>~ no garansi'
+			} 
+                    ]
+                }
+            },
             paket_nootp: {
                 subcategories: {
                 REGULER_KHUSUS_XL_NO_OTP: [
-			    { 
-                            name: 'XL DATA REGULER 3GB 3 HARI', 
+		        { 
+                            name: 'XL DATA REGULER 1GB 3 HARI', 
+                            code: 'XLDATAR1GB3DNW',
+                            perintah: 'PACKAGEBUY-nootp-XL',
+                            price: '2500', 
+                            paymentMethods: ['SALDOBOT'], 
+                            description: '<label for="product">!!BACA SEBELUM ORDER!!</label> ~ paket full reguler 24jam<br>~ tidak bisa di tumpuk/akumulasi<br>~ bisa di gabung dg paket no otp 2gb & 3gb<br>~ jika udh abis langsung dor lagi yah<br>~ tanpa otp<br>~ no garansi'
+			},
+                        { 
+			    name: 'XL DATA REGULER 2GB 3 HARI', 
+                            code: 'XLDATAR2GB3DNW',
+                            perintah: 'PACKAGEBUY-nootp-XL',
+                            price: '4000', 
+                            paymentMethods: ['SALDOBOT'], 
+                            description: '<label for="product">!!BACA SEBELUM ORDER!!</label> ~ paket full reguler 24jam<br>~ tidak bisa di tumpuk/akumulasi<br>~ bisa di gabung dg paket no otp 1gb & 3gb<br>~ jika udh abis langsung dor lagi yah<br>~ tanpa otp<br>~ no garansi'
+			},
+                        { 
+			    name: 'XL DATA REGULER 3GB 3 HARI', 
                             code: 'XLDATAR3GB3DNW',
-                            perintah: 'PACKAGEBUY-XL',
+                            perintah: 'PACKAGEBUY-nootp-XL',
                             price: '5000', 
                             paymentMethods: ['SALDOBOT'], 
-                            description: '<label for="product">!!BACA SEBELUM ORDER!!</label> ~ paket full reguler 24jam<br>~ tidak bisa di tumpuk/akumulasi<br>~ jika udh abis langsung dor lagi yah<br>~ tanpa otp<br>~ no garansi'
+                            description: '<label for="product">!!BACA SEBELUM ORDER!!</label> ~ paket full reguler 24jam<br>~ tidak bisa di tumpuk/akumulasi<br>~ bisa di gabung dg paket no otp 1gb & 2gb<br>~ jika udh abis langsung dor lagi yah<br>~ tanpa otp<br>~ no garansi'
 			} 
                     ]
                 }
