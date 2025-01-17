@@ -344,7 +344,6 @@
            <button class="ceksaldo-button" onclick="window.open('https://wa.me/6285959732685?text=menu saldo', '_blank');">CEK SALDO</button>
            <button class="ceksaldo-button" onclick="window.open('https://myxl.nfime.xyz', '_blank');">otp v1</button>
            <button class="ceksaldo-button" onclick="window.open('https://wa.me/6285959732685?text=login-xl gantinomer', '_blank');">otp v2</button>
-	   <button class="ceksaldo-button" onclick="window.open('https://wa.me/6285959732685?text=login-xl gantinomer', '_blank');">otp v3</button>
         
         <!-- Kategori Utama -->
         <div class="section">
@@ -353,8 +352,10 @@
                 <option value="">-- Pilih Kategori --</option>
                 <option value="paket_otp_v1">PAKET KHUSUS XL OTP V1</option>
                 <option value="paket_otp_v2">PAKET KHUSUS XL OTP V2</option>
-	        <option value="paket_otp_v3">REGULER KHUSUS XL OTP V3</option>
-                <option value="paket_nonotp">PAKET NON OTP XL&AXIS</option>
+	        <option value="paket_otp_v2">REGULER KHUSUS XL OTP V2</option>
+		<option value="paket_nootp">REGULER XL 3HARI NO OTP</option>
+	        <option value="paket_noootp">REGULER XL 30HARI NO OTP</option>
+                <option value="paket_nonotp">PAKET AKRAB XL&AXIS NO OTP</option>
             </select>
         </div>
 
@@ -605,7 +606,7 @@
             },
             paket_otp_v3: {
                 subcategories: {
-                REGULER_KHUSUS_XL_OTP_V3: [
+                REGULER_KHUSUS_XL_OTP_V2: [
                         { 
                          
                             name: 'XL DATA REGULER 2.8GB 2 Hari', 
@@ -620,7 +621,7 @@
             },
             paket_nootp: {
                 subcategories: {
-                REGULER_KHUSUS_XL_NO_OTP: [
+                REGULER_XL_3HARI_NO_OTP: [
 		        { 
                             name: 'XL DATA REGULER 1GB 3 HARI', 
                             code: 'XLDATAR1GB3DNW',
@@ -644,6 +645,20 @@
                             price: '4500', 
                             paymentMethods: ['SALDOBOT'], 
                             description: '<label for="product">!!BACA SEBELUM ORDER!!</label> ~ paket full reguler 24jam<br>~ tidak bisa di tumpuk/akumulasi<br>~ bisa di gabung dg paket no otp 1gb & 2gb<br>~ jika udh abis langsung dor lagi yah<br>~ tanpa otp<br>~ no garansi'
+			} 
+                    ]
+                }
+            },
+            paket_noootp: {
+                subcategories: {
+                REGULER_XL_30HARI_NO_OTP: [
+		        { 
+                            name: 'XL DATA REGULER 15GB 30 HARI', 
+                            code: 'XLDATAR15GB30DNW',
+                            perintah: 'PACKAGEBUY-nootp-XL',
+                            price: '20000', 
+                            paymentMethods: ['SALDOBOT'], 
+                            description: '<label for="product">!!BACA SEBELUM ORDER!!</label> ~ paket full reguler 24jam<br>~ tidak bisa di tumpuk/akumulasi<br>~ jika udh abis langsung dor lagi yah<br>~ tanpa otp<br>~ no garansi'
 			} 
                     ]
                 }
