@@ -351,10 +351,11 @@
             <label for="category">Pilih Kategori:</label>
             <select id="category">
                 <option value="">-- Pilih Kategori --</option>
-                <option value="paket_otp_v1">PAKET KHUSUS XL (OTP V1)</option>
-                <option value="paket_otp_v2">PAKET KHUSUS XL (OTP V2)</option>
-	        <option value="paket_VIotp_v2">REGULER XL 2HARI (OTP V2)</option>
-                <option value="paket_nonotp">PAKET AKRAB XL&AXIS (NO OTP)</option>
+                <option value="paket_otp_v1">Paket Khusus XL (OTP V1)</option>
+                <option value="paket_otp_v2">Paket Khusus XL (OTP V2)</option>
+	        <option value="paket_VIotp_v2">Reguler XL 2HARI (OTP V2)</option>
+	        <option value="paket_bekas">Akrab Mingguan XL&AXIS (NO OTP)</option>
+                <option value="paket_nonotp">Paket Akrab XL&AXIS (NO OTP)</option>
             </select>
         </div>
 
@@ -413,7 +414,7 @@
         const products = {
             paket_otp_v1: {
                 subcategories: {
-                    AKRAB_PENGELOLA: [
+                    Akrab_Pengelola: [
                         { 
                             name: 'Unlock anggota tambahan Akrab', 
                             code: 'XAA1',
@@ -455,7 +456,7 @@
                             description: '<label for="product">!!BACA SEBELUM ORDER!!</label>~ Pengelola akrab XXL<br>~ beli di jam tengah malam agar mendapat reward (ga ada jaminan)<br>~ Sediakan pulsa/e-wallet & bayar nominal  270.000' 
                         }
                     ],
-                   EXTRA_COMBO_FLEX: [
+                  Xtra_Combo_Flex: [
                         { 
                             name: ' Xtra Combo Flex S', 
                             code: 'xcf1',
@@ -469,7 +470,7 @@
             },
             paket_otp_v2: {
                     subcategories: {
-                    EXTRA_COMBO_PLUS: [
+                    Xtra_Combo_Plus: [
                         { 
                             name: 'Syarat Addon Xtra Combo Plus/XCP 4GB/5gb', 
                             code: '62a49f0f7585e542fc195914ee11d2de',
@@ -535,7 +536,7 @@
                             description: '<label for="product">!!BACA SEBELUM ORDER!!</label> ~ paket Instagram 15gb<br>~ syarat harus ada paket extra combo plus/xcp<br>~ masa aktif mengikuti paket extra combo plus/xcp<br>~ no garansi<br>~ Sediakan e-wallet dana & bayar 5000'
 			}
                     ],
-                    XTRA_COMBO_SPESIAL: [
+                    Xtra_Combo_Spesial: [
                         { 
                             code: 'c03be70fb3523ac2ac440966d3a5920e',
                             name: 'Syarat Addon Xtra Combo Special/XCS', 
@@ -597,9 +598,8 @@
             },
             paket_VIotp_v2: {
                 subcategories: {
-                REGULER_KHUSUS_XL_OTP_V2: [
+                Reguler_Khusus_xl: [
                         { 
-                         
                             name: 'XL DATA REGULER 2.8GB 2 Hari', 
                             code: 'f2fa05f28c146fdb67488ec53ce5c2cc',
                             perintah: 'PACKAGEBUY-XL',
@@ -610,136 +610,9 @@
                     ]
                 }
             },
-            paket_nootp: {
+            paket_bekas: {
                 subcategories: {
-                REGULER_XL_3HARI_NO_OTP: [
-		        { 
-                            name: 'XL DATA REGULER 1GB 3 HARI', 
-                            code: 'XLDATAR1GB3DNW',
-                            perintah: 'PACKAGEBUY-nootp-XL',
-                            price: '2.500', 
-                            paymentMethods: ['SALDOBOT'], 
-                            description: '<label for="product">!!BACA SEBELUM ORDER!!</label> ~ paket full reguler 24jam<br>~ tidak bisa di tumpuk/akumulasi<br> ~tdk menambah masa aktif kartu<br> ~tdk menambah masa aktif kartu<br>~ bisa di gabung dg paket no otp 2gb & 3gb<br>~ jika udh abis langsung dor lagi yah<br>~ tanpa otp<br>~ no garansi'
-			},
-                        { 
-			    name: 'XL DATA REGULER 2GB 3 HARI', 
-                            code: 'XLDATAR2GB3DNW',
-                            perintah: 'PACKAGEBUY-nootp-XL',
-                            price: '3.500', 
-                            paymentMethods: ['SALDOBOT'], 
-                            description: '<label for="product">!!BACA SEBELUM ORDER!!</label> ~ paket full reguler 24jam<br>~ tidak bisa di tumpuk/akumulasi<br> ~tdk menambah masa aktif kartu<br>~ bisa di gabung dg paket no otp 1gb & 3gb<br>~ jika udh abis langsung dor lagi yah<br>~ tanpa otp<br>~ no garansi'
-			},
-                        { 
-			    name: 'XL DATA REGULER 3GB 3 HARI', 
-                            code: 'XLDATAR3GB3DNW',
-                            perintah: 'PACKAGEBUY-nootp-XL',
-                            price: '4.500', 
-                            paymentMethods: ['SALDOBOT'], 
-                            description: '<label for="product">!!BACA SEBELUM ORDER!!</label> ~ paket full reguler 24jam<br>~ tidak bisa di tumpuk/akumulasi<br> ~tdk menambah masa aktif kartu<br>~ bisa di gabung dg paket no otp 1gb & 2gb<br>~ jika udh abis langsung dor lagi yah<br>~ tanpa otp<br>~ no garansi'
-		        },
-                        { 
-			    name: 'XL DATA REGULER 5GB 3 HARI', 
-                            code: 'XLDATAR5GB3DNEW',
-                            perintah: 'PACKAGEBUY-nootp-XL',
-                            price: '7.000', 
-                            paymentMethods: ['SALDOBOT'], 
-                            description: '<label for="product">!!BACA SEBELUM ORDER!!</label> ~ paket full reguler 24jam<br>~ tidak bisa di tumpuk/akumulasi<br> ~tdk menambah masa aktif kartu<br>~ bisa di gabung dg paket no otp 1gb & 2 & 3 gb<br>~ jika udh abis langsung dor lagi yah<br>~ tanpa otp<br>~ no garansi'
-			} 
-                    ]
-                }
-            },
-            paket_noootp: {
-                subcategories: {
-                REGULER_XL_30HARI_NO_OTP: [
-		        { 
-                            name: 'XL DATA REGULER 15GB 30 HARI', 
-                            code: 'XLDATAR15GB30DNW',
-                            perintah: 'PACKAGEBUY-nootp-XL',
-                            price: '20.000', 
-                            paymentMethods: ['SALDOBOT'], 
-                            description: '<label for="product">!!BACA SEBELUM ORDER!!</label> ~ paket full reguler 24jam<br>~ tidak bisa di tumpuk/akumulasi<br> ~tdk menambah masa aktif kartu<br>~ jika udh abis langsung dor lagi yah<br>~ tanpa otp<br>~ no garansi'
-			} 
-                    ]
-                }
-            },
-            paket_nonotp: {
-                subcategories: {
-                ANGGOTA_AKRAB_30_HARI: [
-                        { 
-                            name: 'Akrab (BIG SUPER)',
-                            code: 'XLBIGSUPER',
-                            perintah: 'ORDERFAST',
-                            paymentMethods: ['saldobot'], 
-                            description: '<label for="product">!!BACA SEBELUM ORDER!!</label> Area 1 = 25 GB - 27 GB<br>Area 2 = 30 GB - 32 GB<br>Area 3 = 43 GB - 55 GB<br>Area 4 = 83 GB - 85 GB<br>~ jika masih ada Akrab,unreg dulu lewat pengelola lama agar tidak gagal<br>~ GARANSI 30HARI<br>~ jika terkena kick/di kelurkn pengelola lama bisa reinfit sendiri tanpa lewat admin',
-                            price: 'Rp 48.000',
-                            subcategoryDescription: '<label for="product">UNTUK CEK AREA KALIAN SILAHKAN TINGGAL KLIK</label> <a href="https://cekarea.robych.my.id" target="_blank">DI SINI</a>'
-                        },
-                        { 
-                            name: 'Akrab (SUPER MINI)',
-                            code: 'XLMINISUPER',
-                            perintah: 'ORDERFAST',
-                            paymentMethods: ['saldobot'], 
-                            description: '<label for="product">!!BACA SEBELUM ORDER!!</label> Area 1 =15,5 GB - 15,5 GB<br>Area 2 = 16,6 GB - 18,5 GB<br>Area 3 = 27 GB - 29 GB<br>Area 4 =51 GB - 53 GB<br>~ jika masih ada Akrab,unreg dulu lewat pengelola lama agar tidak gagal<br>~ GARANSI 30HARI<br>~ jika terkena kick/di kelurkn pengelola lama bisa reinfit sendiri tanpa lewat admin',
-                            price: 'Rp 39.500',
-			},
-                        { 
-                            name: 'AkrabAnggota(Mega Big)',
-                            code: 'XLBIGMEGA',
-                            perintah: 'ORDERFAST',
-                            paymentMethods: ['saldobot'], 
-                            description: '<label for="product">!!BACA SEBELUM ORDER!!</label> Area 1 =93,5 GB - 95,5 GB<br>Area 2 = 96,6 GB - 98,5 GB<br>Area 3 = 107 GB - 109 GB<br>Area 4 =131 GB - 133 GB<br>~ jika masih ada Akrab,unreg dulu lewat pengelola lama agar tidak gagal<br>~ GARANSI 30HARI<br>~ jika terkena kick/di kelurkn pengelola lama bisa reinfit sendiri tanpa lewat admin',
-                            price: 'Rp 83.000',
-                        },
-                        { 
-                            name: 'Akrab XL NO REW (MINI)',
-                            code: 'XLMINI',
-		            perintah: 'ORDERFAST',
-                            paymentMethods: ['saldobot'], 
-                            description: '<label for="product">!!BACA SEBELUM ORDER!!</label> Area 1 = 21 GB<br>Area 2 = 24 GB<br>Area 3 = 32 GB<br>Area 4 = 59 GB<br>~ jika masih ada Akrab,unreg dulu via myxl<br>~ GARANSI 30HARI<br>~ jika terkena kick/di kelurkn pengelola lama bisa reinfit sendiri tanpa lewat admin',
-                            price: 'Rp 50.000'
-                        },
-                        { 
-                            name: 'Akrab XL REW (BIG)',
-                            code: 'XLBIG',
-		            perintah: 'ORDERFAST',
-                            paymentMethods: ['saldobot'], 
-                            description: '<label for="product">!!BACA SEBELUM ORDER!!</label> Area 1 = 34.5 GB - 36.5 GB<br>Area 2 = 37.5 GB - 39.5 GB<br>Area 3 = 48 GB - 50 GB<br>Area 4 = 72 GB - 74 GB<br>~ Jka bonus myRewards tidak masuk.. silahkan ajukan komplen setelah 3 jam..<br>~ jika bonus myRewards  tetap tidak masuk.. akan di refund RP 5.000<br>~ jika masih ada Akrab,unreg dulu via myxl<br>~ GARANSI 30HARI<br>~ jika terkena kick/di kelurkn pengelola lama bisa reinfit sendiri tanpa lewat admin',
-                            price: 'Rp 52.000'
-                        },
-                        { 
-                            name: 'Akrab XXL REW (JUMBO v1)',
-                            code: 'XLJUMBO',
-		            perintah: 'ORDERFAST',
-                            paymentMethods: ['saldobot'], 
-                            description: '<label for="product">!!BACA SEBELUM ORDER!!</label> Area 1 = 65 GB<br>Area 2 = 70 GB<br>Area 3 = 83 GB<br>Area 4 = 123 GB<br>~ Jka bonus myRewards tidak masuk.. silahkan ajukan komplen setelah 3 jam..<br>~ jika bonus myRewards tetap tidak masuk.. akan di refund RP 5.000<br>~ jika masih ada Akrab,unreg dulu via myxl<br>~ GARANSI 30HARI<br>~ jika terkena kick/di kelurkn pengelola lama bisa reinfit sendiri tanpa lewat admin',
-                            price: 'Rp 75.000'
-                        },
-			{ 
-                            name: 'Akrab XXL REW (JUMBO v2)',
-                            code: 'XLJUMBOV2',
-			    perintah: 'ORDERFAST',
-			    paymentMethods: ['saldobot'], 
-                            description: '<label for="product">!!BACA SEBELUM ORDER!!</label><br>Area 1 = 71 GB<br>Area 2 = 74 GB<br>Area 3 = 85 GB<br>Area 4 = 109 GB<br>~ Jka bonus myRewards tidak masuk.. silahkan ajukan komplen setelah 3 jam..<br>~ jika bonus myRewards tetap tidak masuk.. akan di refund RP 5.000<br>~ jika masih ada Akrab,unreg dulu via myxl<br>~ GARANSI 30HARI<br>~ jika terkena kick/di kelurkn pengelola lama bisa reinfit sendiri tanpa lewat admin',
-                            price: '68.000'
-                        },
-                        { 
-                            name: 'REINVITE (Big,mini,jumbo,superbig,supermini)',
-                            code: 'REINVITE',
-			    perintah: 'ORDERFAST',
-                            paymentMethods: ['saldobot'], 
-                            description: '<label for="product">!!BACA SEBELUM ORDER!!</label>~ untuk infit ulang pakrt akrab yg ke kick<br>~ TAPI INGAT jika kalia sengaja hapus paket akrab sendiri server otomatis tidak bakal ngisi<br>~ semua udh di atur otomatis dari server',
-                            price: 'Rp 0'
-                        },
-                        { 
-                            name: 'Akrab Orderan Fake',
-                            code: 'TESAKRAB',
-			    perintah: 'ORDERFAST',
-                            paymentMethods: ['saldobot'], 
-                            description: '<label for="product">!!BACA SEBELUM ORDER!!</label> sodakoh',
-                            price: 'Rp 1.000'
-			}
-                    ],
-                    BEKASAN_AKRAB_MINGGUAN: [
+                Akrab_Mingguan_XL_AXIS: [
 	                { 
                             name: 'Akrab anggota xl 5 hri',
                             code: 'XLBEKASAN5',
@@ -820,7 +693,7 @@
                             paymentMethods: ['saldobot'], 
                             description: '<label for="product">!!BACA SEBELUM ORDER!!</label> Area 1 = 7,5 GB<br>Area 2 = 12 GB<br>Area 3 = 25 GB<br>Area 4 = 65 GB<br>~ jika masih ada Akrab,unreg dulu via myxl/link web di bot<br> ~ jika hoki bisa dpat exp sampe 14 hri<br> ~ PAKET RESMI',
                             price: 'Rp 19.000'
-				},
+			},
                         { 
                             name: 'Akrab anggota xl 15 hri',
                             code: 'XLBEKASAN15',
@@ -836,6 +709,85 @@
                             paymentMethods: ['saldobot'], 
                             description: '<label for="product">!!BACA SEBELUM ORDER!!</label> Area 1 = 7,5 GB<br>Area 2 = 12 GB<br>Area 3 = 25 GB<br>Area 4 = 65 GB<br>~ jika masih ada Akrab,unreg dulu via myxl/link web di bot<br> ~ jika hoki bisa dpat exp sampe 16 hri<br> ~ PAKET RESMI',
                             price: 'Rp 23.000'
+			} 
+                    ]
+                }
+            },
+            paket_nonotp: {
+                subcategories: {
+                Anggota_Akrab_XL_AXIS_30hri: [
+                        { 
+                            name: 'Akrab (BIG SUPER)',
+                            code: 'XLBIGSUPER',
+                            perintah: 'ORDERFAST',
+                            paymentMethods: ['saldobot'], 
+                            description: '<label for="product">!!BACA SEBELUM ORDER!!</label> Area 1 = 25 GB - 27 GB<br>Area 2 = 30 GB - 32 GB<br>Area 3 = 43 GB - 55 GB<br>Area 4 = 83 GB - 85 GB<br>~ jika masih ada Akrab,unreg dulu lewat pengelola lama agar tidak gagal<br>~ GARANSI 30HARI<br>~ jika terkena kick/di kelurkn pengelola lama bisa reinfit sendiri tanpa lewat admin',
+                            price: 'Rp 48.000',
+                            subcategoryDescription: '<label for="product">UNTUK CEK AREA KALIAN SILAHKAN TINGGAL KLIK</label> <a href="https://cekarea.robych.my.id" target="_blank">DI SINI</a>'
+                        },
+                        { 
+                            name: 'Akrab (SUPER MINI)',
+                            code: 'XLMINISUPER',
+                            perintah: 'ORDERFAST',
+                            paymentMethods: ['saldobot'], 
+                            description: '<label for="product">!!BACA SEBELUM ORDER!!</label> Area 1 =15,5 GB - 15,5 GB<br>Area 2 = 16,6 GB - 18,5 GB<br>Area 3 = 27 GB - 29 GB<br>Area 4 =51 GB - 53 GB<br>~ jika masih ada Akrab,unreg dulu lewat pengelola lama agar tidak gagal<br>~ GARANSI 30HARI<br>~ jika terkena kick/di kelurkn pengelola lama bisa reinfit sendiri tanpa lewat admin',
+                            price: 'Rp 39.500',
+			},
+                        { 
+                            name: 'AkrabAnggota(Mega Big)',
+                            code: 'XLBIGMEGA',
+                            perintah: 'ORDERFAST',
+                            paymentMethods: ['saldobot'], 
+                            description: '<label for="product">!!BACA SEBELUM ORDER!!</label> Area 1 =93,5 GB - 95,5 GB<br>Area 2 = 96,6 GB - 98,5 GB<br>Area 3 = 107 GB - 109 GB<br>Area 4 =131 GB - 133 GB<br>~ jika masih ada Akrab,unreg dulu lewat pengelola lama agar tidak gagal<br>~ GARANSI 30HARI<br>~ jika terkena kick/di kelurkn pengelola lama bisa reinfit sendiri tanpa lewat admin',
+                            price: 'Rp 83.000',
+                        },
+                        { 
+                            name: 'Akrab XL NO REW (MINI)',
+                            code: 'XLMINI',
+		            perintah: 'ORDERFAST',
+                            paymentMethods: ['saldobot'], 
+                            description: '<label for="product">!!BACA SEBELUM ORDER!!</label> Area 1 = 21 GB<br>Area 2 = 24 GB<br>Area 3 = 32 GB<br>Area 4 = 59 GB<br>~ jika masih ada Akrab,unreg dulu via myxl<br>~ GARANSI 30HARI<br>~ jika terkena kick/di kelurkn pengelola lama bisa reinfit sendiri tanpa lewat admin',
+                            price: 'Rp 50.000'
+                        },
+                        { 
+                            name: 'Akrab XL REW (BIG)',
+                            code: 'XLBIG',
+		            perintah: 'ORDERFAST',
+                            paymentMethods: ['saldobot'], 
+                            description: '<label for="product">!!BACA SEBELUM ORDER!!</label> Area 1 = 34.5 GB - 36.5 GB<br>Area 2 = 37.5 GB - 39.5 GB<br>Area 3 = 48 GB - 50 GB<br>Area 4 = 72 GB - 74 GB<br>~ Jka bonus myRewards tidak masuk.. silahkan ajukan komplen setelah 3 jam..<br>~ jika bonus myRewards  tetap tidak masuk.. akan di refund RP 5.000<br>~ jika masih ada Akrab,unreg dulu via myxl<br>~ GARANSI 30HARI<br>~ jika terkena kick/di kelurkn pengelola lama bisa reinfit sendiri tanpa lewat admin',
+                            price: 'Rp 52.000'
+                        },
+                        { 
+                            name: 'Akrab XXL REW (JUMBO v1)',
+                            code: 'XLJUMBO',
+		            perintah: 'ORDERFAST',
+                            paymentMethods: ['saldobot'], 
+                            description: '<label for="product">!!BACA SEBELUM ORDER!!</label> Area 1 = 65 GB<br>Area 2 = 70 GB<br>Area 3 = 83 GB<br>Area 4 = 123 GB<br>~ Jka bonus myRewards tidak masuk.. silahkan ajukan komplen setelah 3 jam..<br>~ jika bonus myRewards tetap tidak masuk.. akan di refund RP 5.000<br>~ jika masih ada Akrab,unreg dulu via myxl<br>~ GARANSI 30HARI<br>~ jika terkena kick/di kelurkn pengelola lama bisa reinfit sendiri tanpa lewat admin',
+                            price: 'Rp 75.000'
+                        },
+			{ 
+                            name: 'Akrab XXL REW (JUMBO v2)',
+                            code: 'XLJUMBOV2',
+			    perintah: 'ORDERFAST',
+			    paymentMethods: ['saldobot'], 
+                            description: '<label for="product">!!BACA SEBELUM ORDER!!</label><br>Area 1 = 71 GB<br>Area 2 = 74 GB<br>Area 3 = 85 GB<br>Area 4 = 109 GB<br>~ Jka bonus myRewards tidak masuk.. silahkan ajukan komplen setelah 3 jam..<br>~ jika bonus myRewards tetap tidak masuk.. akan di refund RP 5.000<br>~ jika masih ada Akrab,unreg dulu via myxl<br>~ GARANSI 30HARI<br>~ jika terkena kick/di kelurkn pengelola lama bisa reinfit sendiri tanpa lewat admin',
+                            price: '68.000'
+                        },
+                        { 
+                            name: 'REINVITE (Big,mini,jumbo,superbig,supermini)',
+                            code: 'REINVITE',
+			    perintah: 'ORDERFAST',
+                            paymentMethods: ['saldobot'], 
+                            description: '<label for="product">!!BACA SEBELUM ORDER!!</label>~ untuk infit ulang pakrt akrab yg ke kick<br>~ TAPI INGAT jika kalia sengaja hapus paket akrab sendiri server otomatis tidak bakal ngisi<br>~ semua udh di atur otomatis dari server',
+                            price: 'Rp 0'
+                        },
+                        { 
+                            name: 'Akrab Orderan Fake',
+                            code: 'TESAKRAB',
+			    perintah: 'ORDERFAST',
+                            paymentMethods: ['saldobot'], 
+                            description: '<label for="product">!!BACA SEBELUM ORDER!!</label> sodakoh',
+                            price: 'Rp 1.000'
 			}
                     ]
                 }
